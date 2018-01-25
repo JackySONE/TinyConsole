@@ -9,7 +9,8 @@
 import UIKit
 
 open class TinyConsoleController: UIViewController {
-    
+
+    var enableShake: Bool = false
     /// the kind of window modes that are supported by TinyConsole
     ///
     /// - collapsed: the console is hidden
@@ -90,7 +91,7 @@ open class TinyConsoleController: UIViewController {
     }
     
     open override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
-        if (motion == UIEventSubtype.motionShake) {
+        if (motion == UIEventSubtype.motionShake && enableShake) {
             consoleWindowMode = consoleWindowMode == .collapsed ? .expanded : .collapsed
             UIView.animate(withDuration: 0.25) {
                 self.view.layoutIfNeeded()

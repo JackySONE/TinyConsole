@@ -35,6 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // TinyConsole with custom gesture reconizers
         window?.rootViewController = TinyConsole.createViewController(rootViewController: tabBarController, withDefaultGestureConfiguration: false)
+
+        TinyConsole.swithShakeMotion(true);
         // single tap
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(consoleTapped))
         tapGestureRecognizer.numberOfTouchesRequired = 1

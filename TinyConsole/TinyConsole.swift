@@ -117,6 +117,11 @@ open class TinyConsole: NSObject {
     public static func removeGestureRecognizer(_ gestureRecognizer: UIGestureRecognizer){
         shared.consoleController.consoleViewController.view.removeGestureRecognizer(gestureRecognizer)
     }
+
+    // MARK: - Switch shake motion 
+    public static func swithShakeMotion(_ on: Bool) {
+        shared.consoleController.enableShake = on;
+    }
 }
 
 // deprecated functions
