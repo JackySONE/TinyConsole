@@ -11,7 +11,7 @@ Shows a console view on the lower bottom of your screen to display debug informa
   s.screenshots      = 'https://raw.githubusercontent.com/Cosmo/TinyConsole/master/TinyConsole-Demo.gif'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Devran Ünal' => 'maccosmo@gmail.com' }
-  s.source           = { :git => 'https://github.com/Cosmo/TinyConsole.git', :branch => 'develop' }
+  s.source           = { :git => 'https://github.com/JackySONE/TinyConsole.git', :branch => 'develop' }
   s.social_media_url = 'https://twitter.com/maccosmo'
 
   s.ios.deployment_target = '8.0'
