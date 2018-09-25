@@ -8,7 +8,7 @@
 
 import UIKit
 
-open class TinyConsole: NSObject {
+@objcMembers open class TinyConsole: NSObject {
     public static var shared = TinyConsole()
     var textView: UITextView?
     var consoleController: TinyConsoleController
