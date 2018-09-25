@@ -13,9 +13,9 @@ open class TinyConsole: NSObject {
     var textView: UITextView?
     var consoleController: TinyConsoleController
     
-    public static var textAppearance = [
-        NSFontAttributeName: UIFont(name: "Menlo", size: 12.0)!,
-        NSForegroundColorAttributeName: UIColor.white]
+    public static var textAppearance: [NSAttributedString.Key : Any] = [
+        NSAttributedString.Key.font: UIFont(name: "Menlo", size: 12.0)!,
+        NSAttributedString.Key.foregroundColor: UIColor.white]
     
     private override init() {
         consoleController = TinyConsoleController()
@@ -60,7 +60,7 @@ open class TinyConsole: NSObject {
         
         // set standard text appearance and override foreground color attribute
         formattedText.addAttributes(TinyConsole.textAppearance, range: range)
-        formattedText.addAttribute(NSForegroundColorAttributeName, value: color, range: range)
+        formattedText.addAttribute(NSAttributedString.Key.foregroundColor, value: color, range: range)
         
         TinyConsole.print(formattedText, global: global)
     }
